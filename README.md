@@ -1,48 +1,12 @@
 # design-scuole-easy-wordpress-theme
  Easyteam.org SRL Child Theme from AgID Designers Italia
 
-# ![developers.italia](https://avatars1.githubusercontent.com/u/15377824?s=36&v=4 "developers.italia") Design Scuole Italia
-[![Join the #design siti scuole channel](https://img.shields.io/badge/Slack%20channel-%23design_siti_scuole-blue.svg)](https://developersitalia.slack.com/messages/design-siti-scuole/)
-
-## **Un sito per le scuole italiane**
-### I primi passi con il tema Wordpress (2.1.4)
+## **Easyteam.org SRL - Un sito per le scuole italiane**
+### I primi passi con il tema Easyteam.org SRL Wordpress (2.1.4)
 
 **Designers Scuole Italia Easyteam.org SRL** è un fork del tema Wordpress Design Scuole Italia, che introduce correzioni al codice originale, lo porta ad un punteggio di accessibilità Google Lighthouse del 100% e lo rende compatibile con il modello di sito istituzionale proposto da Easyteam.org SRL all'indirizzo: https://scuole.easyteam.org/agid/ 
 
 **Design Scuole Italia** è il tema WordPress che permette di aderire al [modello di sito istituzionale delle scuole](https://designers.italia.it/modello/scuole/), progettato dal Dipartimento per la trasformazione digitale in collaborazione con il Ministero dell’Istruzione.
-
-## **Installazione e supporto**
-### **Come scaricare il tema**
-
-Per scaricare il tema hai le seguenti opzioni:
-
-+ eseguire un **fork** del repository cliccando sul pulsante in alto a destra <br>
-  ![fork](https://user-images.githubusercontent.com/69706/188415997-2dfee9d2-2c45-4f5b-babd-d4f328770f04.png)
-+ eseguire un **fork** del repository tramite il comando `git fork https://github.com/italia/design-scuole-wordpress-theme.git` da terminale
-+ eseguire il **download**, cliccando prima sul pulsante "Code" e poi sulla voce "Download ZIP" dal menu a tendina 
-![download-zip](https://user-images.githubusercontent.com/69706/188414872-9a0c33c5-19b1-461a-b577-29cb08723806.png)
-
-Se non conosci il comando `fork` puoi [leggere questa guida](https://docs.github.com/en/get-started/quickstart/fork-a-repo) (disponibile solo in inglese)
-
-_👉 **Nota bene**: se decidi di scaricare il tema tramite il `fork` non è necessario effettuare le _pull request_ sul repository originale_
-
-### Come aggiornare il tema
-Se hai scaricato il tema tramite il comando **fork** e vuoi aggiornarla all'ultima versione, esegui il comando `git pull` da terminale.
-
-### Dipendenze 
-
-Il tema non è più dipendente dai sottomoduli CMB2, quindi non sono più necessari i comandi:
-
-+ `cd design-scuole-wordpress-theme/`
-+ `git submodule init`
-+ `git submodule update --remote`
-
-In caso di problemi nell'aggiornamento di un repository già installato con i sottomoduli, è sufficiente rimuovere la directory `inc/vendor/CMB2` prima di eseguire il comando `git pull`.
-
-### **Supporto tecnico ed editoriale**
-Sul [canale Slack #design-siti-scuole](http://developersitalia.slack.com/messages/design-siti-scuole) puoi confrontarti sulle risorse e trovare le risposte a tutte le domande riguardo problemi tecnici o l’architettura dei contenuti.
-
-È necessario avere un’utenza Slack di Developers Italia. [Attivala adesso](https://slack.developers.italia.it/).
 
 ---
 
@@ -247,13 +211,6 @@ Cliccando su “Configurazione" è possibile definire:
 -	**altro**: i contenuti del footer (in cui vanno inserite le informazioni di base della scuola: indirizzo, pec, codice ipa, codice meccanografico, etc), il token mapbox (da creare per utilizzare le mappe openstreetmap dei luoghi), il testo delle mail delle circolari, e il setup della sezione albo.
 
 
-### **La community di riferimento**
-Scopri i canali della community dove confrontarti sulle risorse del modello:
-
--	[Forum Italia](https://forum.italia.it/) - unisciti alla discussione sul design dei servizi digitali con gli esperti del settore;
--	[Canale Slack](http://developersitalia.slack.com/messages/design-siti-scuole) - dialoga e collabora in tempo reale con la community di Designers Italia;
--	[GitHub](https://github.com/italia/design-scuole-wordpress-theme) - il repository GitHub del tema WordPress “Design Scuole Italia”.
-
 ### **F.A.Q**
 ➔	**Chi gestisce il sito?**
 
@@ -327,22 +284,6 @@ Di seguito elencati i componenti distribuiti (derivati dal template html utilizz
 - [Responsive Tabs](http://jellekralt.github.io/Responsive-Tabs/) © Jelle Kralt, licenza MIT;
 - [Sticky Kit](https://leafo.net/sticky-kit/) © Leafo, licenza MIT;
 - [svgxuse](https://icomoon.io/svgxuse-demo/) © Icomoon, licenza MIT.
-
-
-## Segnalazione bug
-Vuoi segnalare un bug o fare una richiesta?
-
-Prima di tutto assicurati che sia un problema relativo al tema WordPress e non a plugin installati o impostazioni del CMS, poi dai un'occhiata a come creare una [issue](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md#creare-una-issue) ed infine, se lo ritieni necessario, apri la issue [in questo repository](https://github.com/italia/design-scuole-wordpress-theme/issues).
-
-## Come contribuire
-Vorresti dare una mano contribuendo allo sviluppo del tema?
-
-Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza su l'[Architettura dell'Informazione dei siti web delle Scuole Italiane](https://docs.google.com/spreadsheets/d/1MoayTY05SE4ixtgBsfsdngdrFJf_Z2KNvDkMF3tKfc8/edit#gid=782511705) e fai riferimento alle [indicazioni su come contribuire](https://github.com/italia/design-scuole-wordpress-theme/blob/main/CONTRIBUTING.md).
-
-A questo punto, è necessario scaricare una copia in locale del tema tramite il comando `git fork https://github.com/italia/design-scuole-wordpress-theme.git` da terminale o cliccando sul pulsante Fork <br>
-![fork](https://user-images.githubusercontent.com/69706/188419656-21fa5b0e-c52a-4168-a1d1-8ea9a149da6a.png)
-
-Una volta terminate le modifiche è necessario aprire una _pull request_ per sottoporle alla revisione del team.
 
 ---
 
