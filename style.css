@@ -1,0 +1,30 @@
+/*
+Theme Name: Easy Design Scuole Italia
+Theme URI: https://www.easyteam.org/
+Description: Easy Design Scuole Italia è l’implementazione di Easyteam.org SRL del tema di Wordpress rilasciato dal Team per la Trasformazione digitale dell’Agenzia per l’Italia Digitale. Easyteam.org SRL ha migliorato l’aderenza alle linee guida di accessibilità WCAG 2.1 e ha curato l’implementazione del modulo di aggiornamento automatico del tema. Design Scuole Italia è il tema di WordPress per i siti delle Scuole Italiane. Rispetta le linee guida di design dell’Agenzia per l’Italia digitale rilasciare dal Team per la Trasformazione Digitale. Utilizza Bootstrap Italia. Basato sul precedente lavoro di Marco Buttarini.
+Author: Ferdinando Bassi - Easyteam.org SRL
+Author URI: https://www.easyteam.org/
+Template: design-scuole
+Version: 2.0.3
+*/
+
+@import "../design-scuole/assets/css/bootstrap-italia.css";
+@import "../design-scuole/assets/css/carousel-style-double.css";
+@import "../design-scuole/assets/css/fonts.css";
+@import "../design-scuole/assets/css/overrides.css";
+@import "../design-scuole/assets/css/owl.carousel.min.css";
+@import "../design-scuole/assets/css/scuole.css";
+@import "../design-scuole/assets/css/splide.min.css";
+
+
+/* PERSONALIZZAZIONI */
+
+/* Override funzioni scuole.css */
+
+.article-title {
+    position:relative;
+    z-index:0;
+    height:300px;
+    display:flex;
+    align-items:center
+}
