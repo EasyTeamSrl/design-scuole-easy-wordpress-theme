@@ -12,9 +12,9 @@ File list
 |-header.php
 |-home.php
 |-assets
-|-css
-|  |-override.css
-|  |-scuole.css
+|  |-css
+|  |  |-override.css
+|  |  |-scuole.css
 |-template-parts
 |  |-common
 |  |   |-copy.php    

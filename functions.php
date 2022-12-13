@@ -1,6 +1,6 @@
 <?php
 
-// Includo i fogli di stile
+// Includo i fogli di stile del tema padre
 add_action( 'wp_enqueue_scripts',
 'enqueue_parent_theme_style' );
 function enqueue_parent_theme_style() 
