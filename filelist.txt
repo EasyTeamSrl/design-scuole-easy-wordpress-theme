@@ -1,0 +1,86 @@
+File list
+----------
+## Elenco modifiche
+## ai file del repository
+## originale Designers Italia
+
+|-style.css
+|-LICENSE
+|-screenshot.png
+|-README.md
+|-functions.php
+|-header.php
+|-home.php
+|-assets
+|-css
+|  |-override.css
+|  |-scuole.css
+|-template-parts
+|  |-common
+|  |   |-copy.php    
+|  |-header
+|  |   |-header-anon.php
+|  |   |-header-logged.php
+|  |   |-slimheader.php
+|  |-hero
+|  |   |-didattica-archive.php 
+|  |   |-didattica.php
+|  |   |-documenti-archive.php 
+|  |   |-documenti.php
+|  |   |-home.php 
+|  |   |-informazioni.php
+|  |   |-luoghi-archive.php 
+|  |   |-luoghi.php
+|  |   |-notizie-archive.php 
+|  |   |-notizie.php
+|  |   |-page.php 
+|  |   |-persone.php
+|  |   |-risorsedidattiche.php 
+|  |   |-servizi-archive.php
+|  |   |-servizi.php 
+|  |   |-strutture.php
+|  |-home
+|  |   |-messages.php
+|  |   |-notizie-circolari.php
+|  |-single
+|  |   |-header-post.php
+|  |   |-more-posts.php
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
