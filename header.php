@@ -19,6 +19,14 @@ $theme_locations = get_nav_menu_locations();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!--
+    #### INIZIO MODIFICA EASYTEAM.ORG SRL ####
+    #### Aggiungo META per verifica AGID ####
+    -->
+    <meta name="description" content="Il template Easyteam a norma AgID">
+	<!--
+    #### FINE MODIFICA EASYTEAM.ORG SRL ####
+    -->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
