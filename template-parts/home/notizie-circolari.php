@@ -31,7 +31,9 @@ if($ct%2)
 			</div>
 		</div><!-- /carousel-large -->
 		<div class="pt-3 text-center">
+            <!-- ### INIZIO MODIFICA EASYTEAM.ORG ### -->
 			<a class="text-underline" href="<?php echo get_post_type_archive_link("circolare"); ?>"><strong>Vedi tutte le circolari</strong></a>
+            <!-- ### FINE MODIFICA EASYTEAM.ORG ### -->
 		</div>
 	</div><!-- /container -->
 </section><!-- /section -->

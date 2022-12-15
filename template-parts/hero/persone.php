@@ -1,3 +1,4 @@
+<!-- ### MODIFICHE EASYTEAM.ORG: TITLE DA H1 => H2 E DA H2 => H3 ### -->
 <?php
 $testo_sezione_persone = dsi_get_option("testo_sezione_persone", "persone");
 ?>

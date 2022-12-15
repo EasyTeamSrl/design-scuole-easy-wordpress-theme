@@ -20,7 +20,9 @@
                 <?php endif; ?>
                 <?php echo nl2br($message['testo_message']) ?>
                 <?php if($message['link_message']): ?>
+                <!-- ### INIZIO MODIFICA EASYTEAM.ORG ### -->
                     <a href="<?php echo $message['link_message']; ?>" class="btn btn-sm btn-outline-<?php echo $color; ?> ml-3">Maggiori informazioni</a>
+                <!-- ### FINE MODIFICA EASYTEAM.ORG ### -->
                 <?php endif; ?>
             </p>
         </div>

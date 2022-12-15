@@ -110,7 +110,9 @@ function dsi_create_pages_on_theme_activation() {
 
 
     // template page per Le Persone
+    // ### INIZIO MODIFICA EASYTEAM.ORG
     $new_page_title    = __( 'Le persone', 'design_scuole_italia' ); // Page's title
+    // ### FINE MODIFICA EASYTEAM.ORG
     $new_page_content  = '';                           // Content goes here
     $new_page_template = 'page-templates/persone.php';       // The template to use for the page
     $page_check        = get_page_by_title( $new_page_title );   // Check if the page already exists
@@ -573,7 +575,9 @@ function dsi_create_pages_on_theme_activation() {
         ));
 
         wp_update_nav_menu_item($menu->term_id, 0, array(
+            // ### INIZIO MODIFICA EASYTEAM.ORG
             'menu-item-title' => __('I luoghi', "design_scuole_italia"),
+            // ### FINE MODIFICA EASYTEAM.ORG
             'menu-item-status' => 'publish',
             'menu-item-object' => 'luogo',
             'menu-item-type' => 'post_type_archive',
@@ -598,7 +602,9 @@ function dsi_create_pages_on_theme_activation() {
 //        $persone_landing_url = dsi_get_template_page_url("page-templates/persone.php");
         $persone_id = dsi_get_template_page_id("page-templates/persone.php");
         wp_update_nav_menu_item($menu->term_id, 0, array(
+            // ### INIZIO MODIFICA EASYTEAM.ORG
             'menu-item-title' => __('Le persone', "design_scuole_italia"),
+            // ### FINE MODIFICA EASYTEAM.ORG
             'menu-item-object-id' => $persone_id,
             'menu-item-object' => 'page',
             'menu-item-status' => 'publish',

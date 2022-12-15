@@ -14,7 +14,9 @@ if ( is_array( $posts_array ) && count( $posts_array ) ) { ?>
 		<div class="row variable-gutters">
 			<div class="col-lg-12">
 
+            <!-- ### INIZIO MODIFICA EASYTEAM.ORG - DA H3 => H2 E MODIFICA TESTO  -->
 				<h2 class="h2 mb-5 text-center semi-bold text-gray-primary"><?php _e("Circolari, notizie, argomenti correlati", "design_scuole_italia"); ?></h2>
+            <!-- ### FINE MODIFICA EASYTEAM.ORG ### -->
 
 				<div class="it-carousel-wrapper carousel-notice it-carousel-landscape-abstract-three-cols splide"
                   data-bs-carousel-splide>

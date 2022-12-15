@@ -31,7 +31,9 @@ $autore = get_user_by("ID", $post->post_author);
                     <div class="card card-avatar card-comments">
                         <div class="card-body p-0">
                             <?php get_template_part("template-parts/autore/card"); ?>
+                            <!-- ### INIZIO MODIFICA EASYTEAM.ORG - RIMOZIONE COMMENTI UTENTI ### -->
                             <!--<div class="comments ml-auto">
+                            <!-- ### FINE MODIFICA EASYTEAM.ORG ### -->
                                 <p><?php echo $post->comment_count; ?></p>
                             </div><!-- /comments -->
                         </div><!-- /card-body -->

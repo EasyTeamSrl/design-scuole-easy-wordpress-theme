@@ -25,8 +25,10 @@ get_header();
             if($home_is_selezione_automatica == "false"){
 //                get_template_part("template-parts/hero/informazioni");
                 get_template_part("template-parts/home/articoli", "manuali");
+                // ### INIZIO MODIFICA EASYTEAM.ORG
                 get_template_part("template-parts/home/notizie", "circolari");
-     
+                // ### FINE MODIFICA EASYTEAM.ORG
+                
             }else{
                 get_template_part("template-parts/home/articoli", "eventi");
             }
@@ -37,15 +39,19 @@ get_header();
         <?php get_template_part("template-parts/home/list", "servizi"); ?>
         </section>
             <?php
-/*            $visualizzazione_didattica = dsi_get_option("visualizzazione_didattica", "didattica");
+/*      ### INIZIO MODIFICA EASYTEAM.ORG ###
+            $visualizzazione_didattica = dsi_get_option("visualizzazione_didattica", "didattica");
             if($visualizzazione_didattica == "scuole")
                 get_template_part("template-parts/home/didattica", "cicli");
             else if($visualizzazione_didattica == "indirizzi")
                 get_template_part("template-parts/home/didattica", "cicli-indirizzi");
+        ### FINE MODIFICA EASYTEAM.ORG ###
 */
  
+            // ### INIZIO MODIFICA EASYTEAM.ORG - SPOSTATA RIGA SUCCESSIVA, ORIGINARIAMENTE IN RIGA 22
             get_template_part("template-parts/home/banner");
 //            get_template_part("template-parts/hero/risorsedidattiche");
+            // ### FINE MODIFICA EASYTEAM.ORG
             get_template_part("template-parts/home/didattica", "risorse");
 
  //             get_template_part("template-parts/luogo/map");

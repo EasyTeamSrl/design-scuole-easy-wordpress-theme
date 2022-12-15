@@ -44,7 +44,9 @@ if($last_notification){
                 <div class="user-details-content">
                     <p><strong><?php echo dsi_get_display_name($current_user->ID); ?></strong></p>
                     <p><?php echo dsi_get_user_role($current_user); ?></p>
+                    <!-- ### INIZIO MODIFICA EASYTEAM.ORG ### -->
                     <a class="btn btn-action btn-xs" href="<?php echo admin_url(); ?>" tabindex="-1">Crea e gestisci contenuti</a>
+                    <!-- ### FINE MODIFICA EASYTEAM.ORG ### -->
                 </div>
             </div><!-- /user-details -->
             <div class="menu-user-list">
