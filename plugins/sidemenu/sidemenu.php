@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: SideMenu
- * Version: 1.6.8
+ * Version: 1.6.9
  * Plugin URI: https://webd.uk/product/sidemenu-upgrade/
  * Description: Injects a sliding side menu / sidebar into any theme!
  * Author: Webd Ltd
@@ -21,7 +21,7 @@ if (!class_exists('sidemenu_class')) {
 
 	class sidemenu_class {
 
-        public static $version = '1.6.8';
+        public static $version = '1.6.9';
 
         private $mobile_toggles = array(
             'twentyseventeen' => 'button.menu-toggle',
@@ -380,17 +380,33 @@ if (!class_exists('sidemenu_class')) {
             $control_description = __('Set the opacity of the overlay that dims the main website.', 'sidemenu');
             sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_overlay_opacity', 'sidemenu_colors', $control_label, $control_description . ' ' . $upgrade_nag);
 
-            $control_label = __('SideMenu Width', 'sidemenu');
-            $control_description = __('Set the width of the SideMenu.', 'sidemenu');
-            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_width', 'sidemenu_general', $control_label, $control_description . ' ' . $upgrade_nag);
+            $control_label = __('Desktop SideMenu Width', 'sidemenu');
+            $control_description = __('Set the width of the SideMenu as a percentage of the display width on larger screens.', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_width', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
 
-            $control_label = __('SideMenu Minimum Width', 'sidemenu');
-            $control_description = __('Set the minimum width of the SideMenu.', 'sidemenu');
-            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_min_width', 'sidemenu_general', $control_label, $control_description . ' ' . $upgrade_nag);
+            $control_label = __('Desktop SideMenu Minimum Width', 'sidemenu');
+            $control_description = __('Set the minimum width of the SideMenu on larger screens.', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_min_width', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
+
+            $control_label = __('Mobile SideMenu Width', 'sidemenu');
+            $control_description = __('Set the width of the SideMenu as a percentage of the display width on smaller screens.', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_width_mobile', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
+
+            $control_label = __('Mobile SideMenu Minimum Width', 'sidemenu');
+            $control_description = __('Set the minimum width of the SideMenu on smaller screens.', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_min_width_mobile', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
+
+            $control_label = __('Rounded Corners', 'sidemenu');
+            $control_description = __('Add rounded corners to the SideMenu.', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_rounded_corners', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
 
             $control_label = __('SideMenu Height', 'sidemenu');
             $control_description = __('Set the height of the SideMenu as a percentage of the display height.', 'sidemenu');
             sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_height', 'sidemenu_general', $control_label, $control_description . ' ' . $upgrade_nag);
+
+            $control_label = __('Grow SideMenu Content', 'sidemenu');
+            $control_description = __('Spreads out the content of the SideMenu so that it fills the available height.', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_grow_content', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
 
             $control_label = __('No Content Animation', 'sidemenu');
             $control_description = __('Prevents the site content from moving when the SideMenu opens.', 'sidemenu');
@@ -415,6 +431,10 @@ if (!class_exists('sidemenu_class')) {
             $control_label = __('Close Dashicon', 'sidemenu');
             $control_description = sprintf(wp_kses(__('Choose your own <a href="%s">dashicon</a> for the button that closes the SideMenu.', 'sidemenu'), array('a' => array('href' => array()))), esc_url('https://developer.wordpress.org/resource/dashicons/'));
             sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_close_dashicon', 'sidemenu_close_button', $label = $control_label, $control_description . ' ' . $upgrade_nag);
+
+            $control_label = __('Rounded Corner', 'sidemenu');
+            $control_description = __('Add a rounded corner to the SideMenu close icon (make sure you give it a background color).', 'sidemenu');
+            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_close_rounded_corner', 'sidemenu_close_button', $label = $control_label, $control_description . ' ' . $upgrade_nag);
 
             $control_label = __('Close Icon Color', 'sidemenu');
             $control_description = __('Set the color of the close icon in the SideMenu.', 'sidemenu');
@@ -495,18 +515,6 @@ if (!class_exists('sidemenu_class')) {
             $control_label = __('Menu Item Hover Animation', 'sidemenu');
             $control_description = __('Adds a hover animation underneath each menu item in the SideMenu.', 'sidemenu');
             sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_menu_item_hover_anim', 'sidemenu_menu_items', $label = $control_label, $control_description . ' ' . $upgrade_nag);
-
-            $control_label = __('Grow SideMenu Content', 'sidemenu');
-            $control_description = __('Spreads out the content of the SideMenu so that it fills the available height.', 'sidemenu');
-            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_grow_content', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
-
-            $control_label = __('Rounded Corner', 'sidemenu');
-            $control_description = __('Add a rounded corner to the SideMenu close icon (make sure you give it a background color).', 'sidemenu');
-            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_close_rounded_corner', 'sidemenu_close_button', $label = $control_label, $control_description . ' ' . $upgrade_nag);
-
-            $control_label = __('Rounded Corners', 'sidemenu');
-            $control_description = __('Add rounded corners to the SideMenu.', 'sidemenu');
-            sidemenuCommon::add_hidden_control($wp_customize, 'sidemenu_rounded_corners', 'sidemenu_general', $label = $control_label, $control_description . ' ' . $upgrade_nag);
 
         }
 
@@ -656,7 +664,7 @@ if (!class_exists('sidemenu_class')) {
             if ($show_close_icon) {
 
 ?>
-<a href="#" class="close_sidemenu" aria-label="Chiudi il menu"><span class="dashicons dashicons-<?php echo $close_dashicon; ?>"></span></a>
+<a href="#" class="close_sidemenu" aria-label="Chiudi"><span class="dashicons dashicons-<?php echo $close_dashicon; ?>"></span></a>
 <?php
 
             }
