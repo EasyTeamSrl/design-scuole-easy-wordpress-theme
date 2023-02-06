@@ -1,4 +1,4 @@
-<!-- ### MODIFICHE EASYTEAM.ORG: TITLE DA H1 => H2 E DA H2 => H3 ### -->
+<!-- ### MODIFICHE EASYTEAM.ORG: TITLE DA H 1 => H 2 E DA H 2 => H 3 ### -->
 <?php
 $testo_sezione_luoghi = dsi_get_option("testo_sezione_luoghi", "luoghi");
 ?>
@@ -12,7 +12,7 @@ $testo_sezione_luoghi = dsi_get_option("testo_sezione_luoghi", "luoghi");
             <div class="col-md-5">
                 <div class="hero-title text-left">
                     <h2 class="p-0 mb-2"><?php _e("I luoghi della Scuola", "design_scuole_italia"); ?></h2>
-                    <h3 class="h4 font-weight-normal"><?php echo $testo_sezione_luoghi; ?></h3>
+                    <p class="h4 font-weight-normal"><?php echo $testo_sezione_luoghi; ?></p>
                 </div><!-- /hero-title -->
             </div><!-- /col-md-5 -->
         </div><!-- /row -->
