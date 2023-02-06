@@ -111,7 +111,7 @@ function dsi_create_pages_on_theme_activation() {
 
     // template page per Le Persone
     // ### INIZIO MODIFICA EASYTEAM.ORG
-    $new_page_title    = __( 'Le Persone', 'design_scuole_italia' ); // Page's title
+    $new_page_title    = __( 'Le persone', 'design_scuole_italia' ); // Page's title
     // ### FINE MODIFICA EASYTEAM.ORG
     $new_page_content  = '';                           // Content goes here
     $new_page_template = 'page-templates/persone.php';       // The template to use for the page
