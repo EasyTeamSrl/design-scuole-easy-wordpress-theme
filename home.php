@@ -19,15 +19,18 @@ get_header();
 
             get_template_part("template-parts/hero/home");
 
- 
+       // ### INIZIO MODIFICA EASYTEAM.ORG
+                get_template_part("template-parts/home/ultimenotizie");
+                get_template_part("template-parts/home/includecustom");
+         // ### FINE MODIFICA EASYTEAM.ORG 
 
             $home_is_selezione_automatica = dsi_get_option("home_is_selezione_automatica", "homepage");
             if($home_is_selezione_automatica == "false"){
-//                get_template_part("template-parts/hero/informazioni");
+        // ### INIZIO MODIFICA EASYTEAM.ORG
+                get_template_part("template-parts/hero/informazioniutili");
                 get_template_part("template-parts/home/articoli", "manuali");
-                // ### INIZIO MODIFICA EASYTEAM.ORG
                 get_template_part("template-parts/home/notizie", "circolari");
-                // ### FINE MODIFICA EASYTEAM.ORG
+        // ### FINE MODIFICA EASYTEAM.ORG
                 
             }else{
                 get_template_part("template-parts/home/articoli", "eventi");
