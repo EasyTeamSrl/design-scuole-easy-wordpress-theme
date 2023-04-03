@@ -1,1 +1,5 @@
-.DS_Store
+# Ignora i file di sistema Mac
+.DS_store
+
+# Ignora il file home.php
+/home.php
