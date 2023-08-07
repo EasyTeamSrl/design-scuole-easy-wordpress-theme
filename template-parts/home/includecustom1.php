@@ -1,7 +1,7 @@
 <?php
 global $post, $tipologia_notizia, $ct, $servizio;
 
-$container_class = "bg-white";
+$container_class = "bg-gray-light";
 
 ?>
 

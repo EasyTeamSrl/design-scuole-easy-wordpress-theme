@@ -21,7 +21,9 @@ get_header();
 
        // ### INIZIO MODIFICA EASYTEAM.ORG
                 get_template_part("template-parts/home/ultimenotizie");
-                get_template_part("template-parts/home/includecustom");
+                get_template_part("template-parts/home/includecustom2");
+                get_template_part("template-parts/home/includecustom1");
+                get_template_part("template-parts/home/includecustom3");
          // ### FINE MODIFICA EASYTEAM.ORG 
 
             $home_is_selezione_automatica = dsi_get_option("home_is_selezione_automatica", "homepage");
@@ -60,6 +62,18 @@ get_header();
  //             get_template_part("template-parts/luogo/map");
 
         endif; // End of the loop.
+        
+        $home_argomenti = dsi_get_option("home_argomenti", "homepage");
+		
+		if (is_array($home_argomenti) && count($home_argomenti)) {
+			?>
+				<section class="section bg-white">
+					<?php get_template_part("template-parts/hero/argomenti"); ?>
+					<?php get_template_part("template-parts/home/list", "argomenti"); ?>
+				</section>
+			<?php
+		}
+                
         ?>
     </main>
 <?php
