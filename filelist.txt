@@ -8,13 +8,25 @@ File list
 |-LICENSE
 |-screenshot.png
 |-README.md
+|-archive-documento.php
 |-functions.php
 |-header.php
 |-home.php
+|
 |-assets
 |  |-css
 |  |  |-override.css
 |  |  |-scuole.css
+|
+|-inc
+|  |-admin
+|  |   |-servizio.php
+|  |-activation.php
+|  |-utils.php
+|
+|-page-templates
+|  |-vuoto.php
+|
 |-template-parts
 |  |-common
 |  |   |-copy.php    
@@ -23,12 +35,15 @@ File list
 |  |   |-header-logged.php
 |  |   |-slimheader.php
 |  |-hero
+|  |   |-bannerdidattica.php
+|  |   |-bannernews.php
 |  |   |-didattica-archive.php 
 |  |   |-didattica.php
 |  |   |-documenti-archive.php 
 |  |   |-documenti.php
 |  |   |-home.php 
 |  |   |-informazioni.php
+|  |   |-informazioniutili.php
 |  |   |-luoghi-archive.php 
 |  |   |-luoghi.php
 |  |   |-notizie-archive.php 
@@ -42,6 +57,7 @@ File list
 |  |-home
 |  |   |-messages.php
 |  |   |-notizie-circolari.php
+|  |   |-ultimenotizie.php
 |  |-single
 |  |   |-header-post.php
 |  |   |-more-posts.php

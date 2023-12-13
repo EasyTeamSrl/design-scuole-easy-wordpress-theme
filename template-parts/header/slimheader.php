@@ -1,10 +1,11 @@
 <!-- ### INIZIO MODIFICA EASYTEAM.ORG ### -->
-<div id="pre-header" class="bg-bluelectric">
+<!--<div id="pre-header" class="bg-bluelectric">-->
+<div id="pre-header" class="bg-petrol">
 <!-- ### FINE MODIFICA EASYTEAM.ORG ### -->
     <div class="container">
         <div class="row variable-gutters">
             <div class="col-6">
-                <a href="https://www.miur.gov.it/" target="_blank" aria-label="MIUR - Collegamento esterno - Apre su nuova scheda">
+                <a href="https://www.miur.gov.it/" target="_blank" aria-label="Ministero dell?istruzione e del Merito">
                     <strong>Ministero dell'Istruzione e del Merito</strong>
                 </a>
             </div><!-- /col-6 -->
@@ -13,7 +14,7 @@
                 <div class="header-utils">
             <!-- ### INIZIO MODIFICA EASYTEAM.ORG ### -->
                     
-            <span class="mr-2 d-none d-lg-block"><?php echo '<a href="' . get_site_url() . '/notizie-da-miur-usr-at/">' ?><?php _e("Notizie da MI-USR-AT", "design_scuole_italia"); ?></a></span>
+            <span class="mr-2 d-none d-lg-block"><?php echo '<a href="' . get_site_url() . '/notizie-da-miur-usr-at/">' ?><?php _e("Notizie da MIM-USR-AT", "design_scuole_italia"); ?></a></span>
             <div class="icon-wrapper">
             <svg class="svg-tag"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-tag"></use></svg>
             </div><!-- /icon-wrapper -->

@@ -3,3 +3,11 @@
 
 # Ignora il file home.php
 /home.php
+
+# ignora header utenti non loggati
+/template-parts/header/header-anon.php
+
+# ignora i template custom
+/template-parts/home/includecustom2.php
+/template-parts/home/includecustom3.php
+
