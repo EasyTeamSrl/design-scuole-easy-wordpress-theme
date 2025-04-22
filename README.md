@@ -2,7 +2,7 @@
  Easyteam.org SRL Child Theme from AgID Designers Italia
 
 ## **Easyteam.org SRL - Un sito per le scuole italiane**
-### I primi passi con il tema Easyteam.org SRL Wordpress (2.7.0)
+### I primi passi con il tema Easyteam.org SRL Wordpress (2.16.1)
 
 **Designers Scuole Italia Easyteam.org SRL** è un fork del tema Wordpress Design Scuole Italia, che introduce correzioni al codice originale, lo porta ad un punteggio di accessibilità Google Lighthouse del 100% e lo rende compatibile con il modello di sito istituzionale proposto da Easyteam.org SRL all'indirizzo: https://scuole.easyteam.org/agid/ 
 

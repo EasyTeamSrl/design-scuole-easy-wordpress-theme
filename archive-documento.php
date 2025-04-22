@@ -26,7 +26,7 @@ global $documento;
                 if (!is_wp_error($tipologia_documento)) {
 
 
-                    $documenti = get_posts("post_type=documento&tipologia-documento=" . $tipologia_documento->slug . "&posts_per_page=18");
+                    $documenti = get_posts("post_type=documento&tipologia-documento=" . $tipologia_documento->slug . "&posts_per_page=60");
                     if (is_array($documenti) && count($documenti) > 0) {
                         $i++;
                         $classcolor = "bg-white";

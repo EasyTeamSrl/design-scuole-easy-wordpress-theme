@@ -29,9 +29,28 @@ $theme_locations = get_nav_menu_locations();
     #### FINE MODIFICA EASYTEAM.ORG SRL ####
     -->
 
-    <?php if (dsi_get_option("favicon_scuola")) { ?>
-		<link rel="icon" type="image/x-icon" href="<?php echo dsi_get_option("favicon_scuola");?>">
-	<?php } ?>
+    <?php if ($favicon_url = dsi_get_option("favicon_scuola")) { ?>
+		<link rel="icon" type="image/x-icon" href="<?= $favicon_url ?>">
+	<?php } 
+
+    // Tag Open Graph per l'immagine di copertina nei link condivisi (es: Facebook)
+    $cover_image_url = dsi_get_option("immagine", "la_scuola");
+    $thumbnail_url = get_the_post_thumbnail_url();
+
+    $home_image_url = $cover_image_url ?: $favicon_url;
+
+    $og_image_url = is_front_page() ? $home_image_url : ($thumbnail_url ?: $home_image_url);
+
+    if ($og_image_url) { ?>
+        <meta property="og:image" content="<?= htmlspecialchars($og_image_url) ?>">
+        <?php
+        $og_image_url_alt = htmlspecialchars(get_post_meta(attachment_url_to_postid($og_image_url), '_wp_attachment_image_alt', true));
+
+        if ($og_image_url_alt) { ?>
+            <meta property="og:image:alt" content="<?= $og_image_url_alt ?>">
+    <?php }
+    }
+    ?>
     
 	<?php wp_head(); ?>
 </head>
@@ -58,9 +77,9 @@ if(is_search() || is_archive())
 
 <?php $active_page = dsi_get_current_group(); ?>
 
-<div id="main-wrapper" class="push_container" id="page_top">
-    <?php get_template_part("template-parts/common/skiplink"); ?>
+<div id="main-wrapper" class="push_container">
     <header id="main-header" class="bg-white">
+        <?php get_template_part("template-parts/common/skiplink"); ?>        
         <?php get_template_part("template-parts/header/slimheader"); ?>
         <div class="container header-top">
             <div class="row variable-gutters">
@@ -72,16 +91,17 @@ if(is_search() || is_archive())
                     </button>
                     <!-- Left menu element-->
                     <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left perfect-scrollbar">
-                        <div class="logo-header">
+                            <a href="<?php echo home_url(); ?>" class="logo-header" <?php echo is_front_page() ? 'aria-current="page"' : ''; ?>>
                             <?php get_template_part("template-parts/common/logo"); ?>
                             <div class="h1">
-                                <a href="<?php echo home_url(); ?>">
                                     <span><?php echo dsi_get_option("tipologia_scuola"); ?></span>
                                     <span><strong><?php echo dsi_get_option("nome_scuola"); ?></strong></span>
                                     <span class="d-none d-lg-block"><?php echo dsi_get_option("luogo_scuola"); ?></span>
-                                </a>
+                                    <?php if (!is_front_page()): ?>
+                                    <span class="sr-only">— Visita la pagina iniziale della scuola</span>
+                                    <?php endif; ?>
                             </div>
-                        </div><!-- /logo-header -->
+                        </a><!-- /logo-header -->
                         <div class="nav-list-mobile dl-menuwrapper">
                             <nav aria-label="Principale">
                                 <ul class="dl-menu nav-list nav-list-primary" data-element="menu">
@@ -215,16 +235,17 @@ if(is_search() || is_archive())
                         </div>
                     </div>
                     <!-- End Left menu element-->
-                    <div class="logo-header">
-						<?php get_template_part("template-parts/common/logo"); ?>
-                        <div class="h1">
-                            <a href="<?php echo home_url(); ?>" aria-label="Vai alla homepage" title="vai alla homepage" >
-                                <span><?php echo dsi_get_option("tipologia_scuola"); ?></span>
-                                <span><strong><?php echo dsi_get_option("nome_scuola"); ?></strong></span>
-                                <span class="d-none d-lg-block"><?php echo dsi_get_option("luogo_scuola"); ?></span>
-                            </a>
-                        </div>
-                    </div><!-- /logo-header -->
+                    <a href="<?php echo home_url(); ?>" class="logo-header" <?php echo is_front_page() ? 'aria-current="page"' : ''; ?>>
+                            <?php get_template_part("template-parts/common/logo"); ?>
+                            <div class="h1">
+                                    <span><?php echo dsi_get_option("tipologia_scuola"); ?></span>
+                                    <span><strong><?php echo dsi_get_option("nome_scuola"); ?></strong></span>
+                                    <span class="d-none d-lg-block"><?php echo dsi_get_option("luogo_scuola"); ?></span>
+                                    <?php if (!is_front_page()): ?>
+                                    <span class="sr-only">— Visita la pagina iniziale della scuola</span>
+                                    <?php endif; ?>                                
+                            </div>
+                        </a><!-- /logo-header -->
                     <div class="sticky-main-nav">
 
                     </div><!-- /sticky-main-nav -->
